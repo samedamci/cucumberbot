@@ -7,3 +7,6 @@
 ```
 !help
 ```
+
+## Contact:
+Discord: samedamci#5384
