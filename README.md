@@ -4,7 +4,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/samedamci/cucumberbot.svg)
 [![Discord](https://img.shields.io/discord/566934496231030795.svg?label=server&logo=discord&logoColor=cyan)](https://discord.gg/7X6cvWF)
 
-![site](https://img.shields.io/badge/-cucumberbot.netlify.com-ff69b4.svg)
+[![site](https://img.shields.io/badge/-cucumberbot.netlify.com-ff69b4.svg)](https://cucumberbot.netlify.com/)
 
 ## To get help use:
 ```
