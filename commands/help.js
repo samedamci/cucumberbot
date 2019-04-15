@@ -3,6 +3,8 @@ const commands = `
 
 !kick - kicks user from server
 !ban - bans user from server
+
+!serverinfo
 `;
 
 bot.on("message", message => {
