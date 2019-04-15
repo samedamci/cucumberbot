@@ -4,7 +4,8 @@ const commands = `
 !kick - kicks user from server
 !ban - bans user from server
 
-!serverinfo
+!serverinfo - informations of your server
+!botinfo - informations of Cucumber Bot
 `;
 
 bot.on("message", message => {
