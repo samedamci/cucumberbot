@@ -1,6 +1,27 @@
 {
   "name": "cucumberbot",
-  "version": "1.0.0",
+  "version": "0.0.1",
+  "description": "simple Discord Bot",
   "main": "index.js",
-  "author": "samedamci"
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "!help"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samedamci/cucumberbot.git"
+  },
+  "keywords": [
+    "discord",
+    "bot"
+  ],
+  "author": "samedamci",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samedamci/cucumberbot/issues"
+  },
+  "homepage": "https://github.com/samedamci/cucumberbot#readme"
 }
