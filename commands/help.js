@@ -1,19 +1,13 @@
-const commands = `
-!help - shows list of commands
-
-!kick - kicks user from server
-!ban - bans user from server
-
-!serverinfo - informations of your server
-!botinfo - informations of Cucumber Bot
-`;
-
 bot.on("message", message => {
-  const { guild } = message;
   if (message.content === `${prefix}help`) {
     const embed = new Discord.RichEmbed()
-      .setTitle("Help")
-      .setDescription(`${commands}`);
+      .addField(`!help`,`shows list of commands`)
+
+      .addField(`!kick`,`kicks user from server`)
+      .addField(`!ban`,`bans user from server`)
+
+      .addField(`!serverinfo`,`informations of this server`)
+      .addField(`!botinfo`,`informations of me`)
     message.channel.send(embed);
   }
 });
