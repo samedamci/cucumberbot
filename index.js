@@ -10,6 +10,12 @@ const { "discord.js": discordJS } = dependencies;
 const { version } = discordJS;
 const { "version": botversion } = package;
 
+require('dotenv/config')
+const http = require('http');
+const port = process.env.PORT || 3000;
+
+http.createServer().listen(port);
+
 const token = process.env.token; 
 bot.login(token);
 
@@ -21,3 +27,7 @@ eval(fs.readFileSync("./commands/help.js") + "");
 eval(fs.readFileSync("./commands/mod.js") + "");
 eval(fs.readFileSync("./commands/info.js") + "");
 eval(fs.readFileSync("./auto/members.js") + "");
+
+bot.on('error', err => {
+    console.log(err)
+}) 
