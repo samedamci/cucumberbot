@@ -1,10 +1,10 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 
-const config = require('./config/config.json');
+const config = require('./config.json');
 const packageLock = require('./package-lock.json');
 const package = require('./package.json');
-const { /*token,*/ prefix } = config;
+const { prefix } = config;
 const { dependencies } = packageLock;
 const { "discord.js": discordJS } = dependencies;
 const { version } = discordJS;
