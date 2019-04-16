@@ -16,7 +16,7 @@ const port = process.env.PORT || 3000;
 
 http.createServer().listen(port);
 
-const token = process.env.token; 
+const token = process.env.TOKEN; 
 bot.login(token);
 
 const fs = require("fs");
