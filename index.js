@@ -4,12 +4,13 @@ const bot = new Discord.Client();
 const config = require('./config/config.json');
 const packageLock = require('./package-lock.json');
 const package = require('./package.json');
-const { token, prefix } = config;
+const { /*token,*/ prefix } = config;
 const { dependencies } = packageLock;
 const { "discord.js": discordJS } = dependencies;
 const { version } = discordJS;
 const { "version": botversion } = package;
 
+const token = process.env.token; 
 bot.login(token);
 
 const fs = require("fs");
