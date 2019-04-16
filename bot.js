@@ -15,7 +15,6 @@ var firstdate = `${day}:${month}:${year}`;
 
 bot.on("ready", () => {
   process.stdout.write("\x1Bc");
-  bot.user.setStatus("idle");
   bot.user.setActivity("commands",{type: "Listening"});
   console.log(`${bot.user.tag} signed!`);
 });
