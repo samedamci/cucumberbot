@@ -14,7 +14,15 @@ var firsttime = `${time}`;
 var firstdate = `${day}:${month}:${year}`;
 
 bot.on("ready", () => {
+  const statuses = [
+    `commands 📓`,
+    `${bot.guilds.size} servers 👫`,
+    `${prefix}help 🚨`
+  ]
+  setInterval(function() {
+    const rstatus = statuses[Math.floor(Math.random() * statuses.length)];
+    bot.user.setActivity(rstatus, {type: "Listening"});
+  }, 5000);
   process.stdout.write("\x1Bc");
-  bot.user.setActivity("commands",{type: "Listening"});
   console.log(`${bot.user.tag} signed!`);
 });

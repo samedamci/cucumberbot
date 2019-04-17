@@ -22,7 +22,9 @@ bot.on("message", message => {
         bot: ${botversion}
         library: ${discordJS.version}
         node: 11.0.0
+        
         **Online from:** ${firstdate} - ${firsttime}
+        **Online on:** ${bot.guilds.size} servers
         `)
         .setFooter(`Joined at: ${guild.joinedAt}`)
         message.channel.send(botinfoEmbed)
