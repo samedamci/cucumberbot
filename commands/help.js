@@ -8,6 +8,7 @@ bot.on("message", message => {
 
       .addField(`!serverinfo`,`informations of this server`)
       .addField(`!botinfo`,`informations of me`)
+      .addField(`!clear <arg>`,`deletes <arg> of messages up`)
     message.channel.send(embed);
   }
 });
