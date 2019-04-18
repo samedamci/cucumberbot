@@ -30,11 +30,7 @@ bot.on("message", message => {
         .addField(`>> Prefix`, `${prefix}`, true)
         .addField(`>> Author`, `samedamci#5384`, true)
         .addField(`>> On this server from`, `${guild.joinedAt}`)
-        .addField(`>> Links`, `
-        :desktop: [webpage](https://cucumber.netlify.com)
-        :keyboard: [service](https://discord.gg/7X6cvWF)
-        :robot: [discordbots](https://discordbots.org/bot/565794682836090880)
-        `)
+        .addField(`>> Links`, `:desktop: [webpage](https://cucumber.netlify.com)   -   :keyboard: [service](https://discord.gg/7X6cvWF)   -   :robot: [discordbots](https://discordbots.org/bot/565794682836090880)`)
         message.channel.send(embed)
     };
     if (message.content.startsWith(prefix + 'ping')) {
