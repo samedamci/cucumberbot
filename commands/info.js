@@ -30,11 +30,15 @@ bot.on("message", message => {
         message.channel.send(botinfoEmbed)
     };
     if (message.content.startsWith(prefix + 'ping')) {
+        let ramusage = Math.floor(process.memoryUsage().rss / 1000000)
         message.channel.send({embed: {
             color: 0x2ed32e,
             fields: [{
                 name: ":ping_pong: Pong",
-                value: `My ping: **${Date.now() - message.createdTimestamp}** ms.`
+                value: `
+                Ping: **${Date.now() - message.createdTimestamp}** ms
+                RAM: ${ramusage} mb
+                `
                 }],
             }
         })

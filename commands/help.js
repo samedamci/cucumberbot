@@ -1,15 +1,31 @@
 bot.on("message", message => {
   if (message.content === `${prefix}help`) {
     const embed = new Discord.RichEmbed()
-      .addField(`!help`,`shows list of commands`)
-
-      .addField(`!kick`,`kicks user from server`)
-      .addField(`!ban`,`bans user from server`)
-      .addField(`!clear <arg>`,`deletes <arg> of messages up`)
-
-      .addField(`!serverinfo`,`informations of this server`)
-      .addField(`!botinfo`,`informations of me`)
-      .addField(`!ping`,`return ping in miliseconds`)
+    .setURL(`https://cucumber.netlify.com`)
+    .setTitle(`View website`)
+    .setAuthor(name=`Cucumber Bot`, icon="https://cdn.discordapp.com/avatars/565794682836090880/7e73680fc78223119c4d551d8a428525.png?size=2048")
+    .setDescription(`This is command list for Cucumber Bot.`)
+      .addField(`Info commands:`,
+      `
+      **${prefix}help**
+      Shows this window
+      **${prefix}ping**
+      Returns ping and RAM usage
+      **${prefix}botinfo**
+      Informations of me
+      **${prefix}serverinfo**
+      Informations of current server
+      `)
+      .addField(`Mods commands:`,
+      `
+      **${prefix}kick <@member>**
+      Kicks user from server
+      **${prefix}ban <@member>**
+      Bans user on server
+      **${prefix}clear <n>**
+      Deletes n last messages
+      `
+      )
     message.channel.send(embed);
   }
 });
