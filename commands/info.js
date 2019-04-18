@@ -18,7 +18,7 @@ bot.on("message", message => {
         const embed = new Discord.RichEmbed()
         .setAuthor(name=`Cucumber Bot`, icon="https://cdn.discordapp.com/avatars/565794682836090880/7e73680fc78223119c4d551d8a428525.png?size=2048")
         .addField(`>> Ping`, `${ping}`, true)
-        .addField(`>> Ram usage`, `${ramusage}`, true)
+        .addField(`>> Ram usage`, `${ramusage}/512 mb`, true)
         .addField(`>> Hosted on`, `Heroku`, true)
         .addField(`>> Online from`, `${firstdate} - ${firsttime}`, true)
         .addField(`>> Language`, `javascript`, true)
@@ -30,7 +30,7 @@ bot.on("message", message => {
         .addField(`>> Prefix`, `${prefix}`, true)
         .addField(`>> Author`, `samedamci#5384`, true)
         .addField(`>> On this server from`, `${guild.joinedAt}`)
-        .addField(`>> Links`, `:desktop: [webpage](https://cucumber.netlify.com) - :keyboard: [service](https://discord.gg/7X6cvWF) - :robot: [discordbots](https://discordbots.org/bot/565794682836090880) - :cat: [github](https://github.com/samedamci/cucumberbot)`)
+        .addField(`>> Links`, `:desktop: [webpage](https://cucumber.netlify.com) | :keyboard: [service](https://discord.gg/7X6cvWF) | :robot: [discordbots](https://discordbots.org/bot/565794682836090880) | :cat: [github](https://github.com/samedamci/cucumberbot)`)
         message.channel.send(embed)
     };
     if (message.content.startsWith(prefix + 'ping')) {
@@ -43,7 +43,7 @@ bot.on("message", message => {
         .setTitle(`:ping_pong: Pong!`)
         .setDescription(`
         Ping: **${ping}** ms
-        RAM: ${ramusage} mb
+        RAM: ${ramusage}/512 mb
         `)
         .setColor(color)
         message.channel.send(embed);
