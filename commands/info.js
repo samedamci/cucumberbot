@@ -1,16 +1,16 @@
 bot.on("message", message => {
     const { guild } = message;
     if (message.content === `${prefix}serverinfo`) {
-        const serverinfoEmbed = new Discord.RichEmbed()
-        .setTitle(`${guild.name}`)
-        .setDescription(`
-        **ID:** ${guild.id}
-        **Region:** ${guild.region}
-        **Members:** ${guild.memberCount}
-        **Owner:** ${guild.owner}
-        `)
-        .setFooter(`Created at: ${guild.createdAt}`)
-        message.channel.send(serverinfoEmbed);
+        const embed = new Discord.RichEmbed()
+        .setAuthor(name=`${guild.name}`, icon=`${guild.iconURL}`)
+        .addField(`>> Owner`, `${guild.owner.user.tag}`, true)
+        .addField(`>> Members`, `${guild.memberCount}`, true)
+        .addField(`>> Channels`, `${guild.channels.size}`, true)
+        .addField(`>> Roles`, `${guild.roles.size}`, true)
+        .addField(`>> Region`, `${guild.region}`, true)
+        .addField(`>> ID`, `${guild.id}`, true)
+        .addField(`>> Created at`, `${guild.createdAt}`, true)
+        message.channel.send(embed);
     };
     if (message.content === `${prefix}botinfo`) {
         let ping = Date.now() - message.createdTimestamp;
@@ -37,8 +37,8 @@ bot.on("message", message => {
         let ping = Date.now() - message.createdTimestamp;
         let ramusage = Math.floor(process.memoryUsage().rss / 1000000);
         let color = 0x2ed32e;
-        if (ping > 90) color = 15322368; 
-        if (ping > 190) color = 16725020; 
+        if (ping > 90) color = 15322368;
+        if (ping > 190) color = 16725020;
         let embed = new Discord.RichEmbed()
         .setTitle(`:ping_pong: Pong!`)
         .setDescription(`
