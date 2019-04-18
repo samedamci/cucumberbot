@@ -29,4 +29,14 @@ bot.on("message", message => {
         .setFooter(`Joined at: ${guild.joinedAt}`)
         message.channel.send(botinfoEmbed)
     };
+    if (message.content.startsWith(prefix + 'ping')) {
+        message.channel.send({embed: {
+            color: 0x2ed32e,
+            fields: [{
+                name: ":ping_pong: Pong",
+                value: `My ping: **${Date.now() - message.createdTimestamp}** ms.`
+                }],
+            }
+        })
+    };
 });
