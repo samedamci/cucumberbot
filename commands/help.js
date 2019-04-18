@@ -1,7 +1,7 @@
 bot.on("message", message => {
   if (message.content === `${prefix}help`) {
     const embed = new Discord.RichEmbed()
-    .setURL(`https://cucumber.netlify.com`)
+    .setURL(`https://cucumberbot.netlify.com`)
     .setTitle(`View website`)
     .setAuthor(name=`Cucumber Bot`, icon="https://cdn.discordapp.com/avatars/565794682836090880/7e73680fc78223119c4d551d8a428525.png?size=2048")
     .setDescription(`This is command list for Cucumber Bot.`)

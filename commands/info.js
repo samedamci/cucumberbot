@@ -31,7 +31,7 @@ bot.on("message", message => {
         .addField(`>> Prefix`, `${prefix}`, true)
         .addField(`>> Author`, `samedamci#5384`, true)
         .addField(`>> On this server from`, `${guild.joinedAt}`)
-        .addField(`>> Links`, `:desktop: [webpage](https://cucumber.netlify.com) | :keyboard: [service](https://discord.gg/7X6cvWF) | :robot: [discordbots](https://discordbots.org/bot/565794682836090880) | :cat: [github](https://github.com/samedamci/cucumberbot)`)
+        .addField(`>> Links`, `:desktop: [webpage](https://cucumberbot.netlify.com) | :keyboard: [service](https://discord.gg/7X6cvWF) | :robot: [discordbots](https://discordbots.org/bot/565794682836090880) | :cat: [github](https://github.com/samedamci/cucumberbot)`)
         message.channel.send(embed)
     };
     if (message.content.startsWith(prefix + 'ping')) {
