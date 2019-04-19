@@ -18,7 +18,7 @@ bot.on("message", message => {
         let botping = Math.round(bot.ping)*1;
         const embed = new Discord.RichEmbed()
         .setAuthor(name=`Cucumber Bot`, icon="https://cdn.discordapp.com/avatars/565794682836090880/7e73680fc78223119c4d551d8a428525.png?size=2048")
-        .addField(`>> Ping`, `msg: ${ping}, bot: ${bot.ping}`, true)
+        .addField(`>> Ping`, `msg: ${ping}, bot: ${botping}`, true)
         .addField(`>> Ram usage`, `${ramusage}/512 MB (${Math.round(ramusage/512*100)}%)`, true)
         .addField(`>> Hosted on`, `Heroku`, true)
         .addField(`>> Online from`, `${firstdate} - ${firsttime}`, true)
