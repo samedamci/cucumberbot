@@ -1,5 +1,6 @@
 bot.on("message", message => {
     const { guild } = message;
+    if (message.author.bot) return;
     if (message.content === `${prefix}serverinfo`) {
         const embed = new Discord.RichEmbed()
         .setAuthor(name=`${guild.name}`, icon=`${guild.iconURL}`)
@@ -12,6 +13,7 @@ bot.on("message", message => {
         .addField(`>> Created at`, `${guild.createdAt}`, true)
         message.channel.send(embed);
     };
+    if (message.author.bot) return;
     if (message.content === `${prefix}botinfo`) {
         let ping = Date.now() - message.createdTimestamp;
         let ramusage = Math.floor(process.memoryUsage().rss / 1000000);
@@ -34,9 +36,10 @@ bot.on("message", message => {
         .addField(`>> Prefix`, `${prefix}`, true)
         .addField(`>> Author`, `samedamci#5384`, true)
         .addField(`>> On this server from`, `${guild.joinedAt}`)
-        .addField(`>> Links`, `:desktop: [webpage](https://cucumberbot.netlify.com) | :keyboard: [service](https://discord.gg/7X6cvWF) | :robot: [discordbots](https://discordbots.org/bot/565794682836090880) | :cat: [github](https://github.com/samedamci/cucumberbot)`)
+        .addField(`>> Links`, `:desktop: [webpage](https://cucumberbot.netlify.com) | :keyboard: [service](https://discord.gg/7X6cvWF) | :robot: [discordbots](https://discordbots.org/bot/565794682836090880) | :cat: [github](https://github.com/samedamci/cucumberbot) | :moneybag: [donate](https://donatebot.io/checkout/566934496231030795)`)
         message.channel.send(embed)
     };
+    if (message.author.bot) return;
     if (message.content.startsWith(prefix + 'ping')) {
         let ping = Date.now() - message.createdTimestamp;
         let ramusage = Math.floor(process.memoryUsage().rss / 1000000);

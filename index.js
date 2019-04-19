@@ -24,6 +24,7 @@ eval(fs.readFileSync("./bot.js") + "");
 eval(fs.readFileSync("./commands/help.js") + "");
 eval(fs.readFileSync("./commands/mod.js") + "");
 eval(fs.readFileSync("./commands/info.js") + "");
+eval(fs.readFileSync("./commands/support.js") + "");
 eval(fs.readFileSync("./auto/members.js") + "");
 
 const config = require('./config.json');

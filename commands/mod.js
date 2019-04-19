@@ -1,4 +1,5 @@
 bot.on("message", message => {
+    if (message.author.bot) return;
     if (!message.guild) return;
     const { guild } = message;
     if (message.content.startsWith(`${prefix}kick`)) {
@@ -29,6 +30,7 @@ bot.on("message", message => {
         message.channel.send(zymbed);
       }
     };
+    if (message.author.bot) return;
     if (message.content.startsWith(`${prefix}ban`)) {
         const user = message.mentions.users.first();
         if (!message.member.roles.some(r=>["Administrator"].includes(r.name)) ) {
@@ -52,6 +54,7 @@ bot.on("message", message => {
           message.channel.send(ymbed);
         } 
     };
+    if (message.author.bot) return;
     if (message.content.indexOf(prefix) !==0) return;
       var args = message.content.slice(prefix.length).trim().split(/ +/g);
       const command = args.shift().toLowerCase();

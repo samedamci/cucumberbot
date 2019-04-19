@@ -1,10 +1,12 @@
 bot.on("message", message => {
+  if (message.author.bot) return;
   if (message.content === `${prefix}help`) {
     const embed = new Discord.RichEmbed()
     .setURL(`https://cucumberbot.netlify.com`)
     .setTitle(`View website`)
     .setAuthor(name=`Cucumber Bot`, icon="https://cdn.discordapp.com/avatars/565794682836090880/7e73680fc78223119c4d551d8a428525.png?size=2048")
-    .setDescription(`This is command list for Cucumber Bot.`)
+    .setDescription(`If you like me you can [donate](https://donatebot.io/checkout/566934496231030795) me, because I would be on better hosting
+    with more RAM and I would have more functions! Please, think that.`)
       .addField(`Info commands:`,
       `
       **${prefix}help**
