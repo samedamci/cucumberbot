@@ -23,7 +23,7 @@ bot.on("message", message => {
         .addField(`>> Hosted on`, `Heroku`, true)
         .addField(`>> Online from`, `${firstdate} - ${firsttime}`, true)
         .addField(`>> Language`, `javascript`, true)
-        .addField(`>> Environment`, `node.js [11.0.0]`, true)
+        .addField(`>> Environment`, `node.js [${nodeversion}]`, true)
         .addField(`>> Library`, `discord.js [${libversion}]`, true)
         .addField(`>> API`, `dblapi.js [${apiversion}]`, true)
         .addField(`>> Version`, `${botversion}`, true)

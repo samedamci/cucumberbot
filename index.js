@@ -32,7 +32,7 @@ const package = require('./package.json');
 
 const { prefix } = config;
 const { dependencies, "version": botversion } = package;
-const { "discord.js": libversion, "dblapi.js": apiversion } = dependencies;
+const { "discord.js": libversion, "dblapi.js": apiversion, "node": nodeversion } = dependencies;
 
 // errorlogs
 bot.on('error', err => {
