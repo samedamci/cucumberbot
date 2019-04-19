@@ -1,13 +1,18 @@
+const apitoken = process.env.APITOKEN;
+
 const Discord = require("discord.js");
 const bot = new Discord.Client();
+const DBL = require("dblapi.js");
+const dbl = new DBL(apitoken, bot);
 
 const config = require('./config.json');
 const packageLock = require('./package-lock.json');
 const package = require('./package.json');
 const { prefix } = config;
 const { dependencies } = packageLock;
-const { "discord.js": discordJS } = dependencies;
-const { version } = discordJS;
+const { "discord.js": discordJS, "dblapi.js": dblapiJS } = dependencies;
+const { "version": libversion  } = discordJS;
+const { "version": apiversion } = dblapiJS;
 const { "version": botversion } = package;
 
 require('dotenv/config')

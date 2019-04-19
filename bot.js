@@ -26,3 +26,7 @@ bot.on("ready", () => {
   process.stdout.write("\x1Bc");
   console.log(`${bot.user.tag} signed!`);
 });
+
+dbl.on('posted', () => {
+  console.log('Server count posted!');
+})
