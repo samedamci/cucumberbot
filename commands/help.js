@@ -1,3 +1,21 @@
+const directoryPath = path.join(__dirname, 'commands');
+fs.readdir(directoryPath, function (err, files) {
+    if (err) return console.log('Unable to scan directory: ' + err);
+    const filesarr = [];
+    files.forEach(file => {
+        const filename = file.slice(0,file.length -3);
+        filesarr.push(filename);
+    });
+    bot.on('message', message => {
+      if (message.author.bot) return;
+      if (message.content === `${prefix}help2`) {
+        const embed = new Discord.RichEmbed()
+        .setDescription(filesarr.join(`,`));
+        message.channel.send(embed);
+      }
+    });
+});
+
 bot.on("message", message => {
   if (message.author.bot) return;
   if (message.content === `${prefix}help`) {
