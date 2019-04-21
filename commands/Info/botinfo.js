@@ -23,7 +23,7 @@ bot.on("message", message => {
         .addField(`>> Prefix`, `${prefix}`, true)
         .addField(`>> Author`, `samedamci#5384`, true)
         .addField(`>> On this server from`, `${guild.joinedAt}`)
-        .addField(`>> Links`, `:desktop: [webpage](https://cucumberbot.netlify.com) | :keyboard: [service](https://discord.gg/7X6cvWF) | :robot: [discordbots](https://discordbots.org/bot/565794682836090880) | :cat: [github](https://github.com/samedamci/cucumberbot) | :moneybag: [donate](https://donatebot.io/checkout/566934496231030795)`)
+        .addField(`>> Links`, `:desktop: [webpage](https://cucumberbot.netlify.com) | :keyboard: [service](https://discord.gg/7X6cvWF) | :robot: [discordbots](https://discordbots.org/bot/565794682836090880) | :cat: [github](https://github.com/samedamci/cucumberbot) | :notepad_spiral: [TODO](https://github.com/users/samedamci/projects/2) | :moneybag: [donate](https://donatebot.io/checkout/566934496231030795)`)
         message.channel.send(embed)
     };
 });

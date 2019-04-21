@@ -19,7 +19,7 @@ fs.readdir(dirModeration, (err, files) => {
 });
 bot.on('message', message => {
   if (message.author.bot) return;
-  if (message.content === `${prefix}help2`) {
+  if (message.content === `${prefix}help`) {
     helpEmbed.setAuthor(name='Cucumber Bot', icon='https://cdn.discordapp.com/avatars/565794682836090880/7e73680fc78223119c4d551d8a428525.png?size=2048')
     .setTitle('View website')
     .setURL('https://cucumberbot.netlify.com')
