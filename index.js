@@ -7,11 +7,6 @@ const path = require('path');
 const Discord = require("discord.js");
 const DBL = require("dblapi.js");
 
-// server
-// const http = require('http');
-// const port = process.env.PORT || 3000;
-// http.createServer().listen(port);
-
 // tokens
 const bottoken = process.env.TOKEN;
 const apitoken = process.env.APITOKEN;

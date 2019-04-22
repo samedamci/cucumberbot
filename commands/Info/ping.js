@@ -12,7 +12,7 @@ bot.on("message", message => {
         .setDescription(`
         Message ping: **${ping}** ms
         Bot ping: **${botping}** ms
-        RAM: ${ramusage}/512 MB (${Math.round(ramusage/512*100)}%)
+        RAM: ${ramusage}/1858 MB (${Math.round(ramusage/1858*100)}%)
         `)
         .setColor(color)
         message.channel.send(embed);
