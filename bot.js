@@ -29,4 +29,13 @@ bot.on("ready", () => {
 
 dbl.on('posted', () => {
   console.log('Server count posted!');
-})
+});
+
+bot.on('message', async message => {
+  if (message.content === 'cc!dev>guilds') {
+      const guildArray = bot.guilds.map((guild) => {
+          return `${guild.name} : ${guild.id}`;
+      });
+      message.channel.send(`\`\`\`${guildArray.join("\n")}\`\`\``);
+  };
+});
