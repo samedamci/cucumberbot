@@ -1,4 +1,4 @@
-bot.on('message', message =>{
+bot.on('message', message => {
     if (message.author.bot) return;
     if (message.content.indexOf(prefix) !==0) return;
       var args = message.content.slice(prefix.length).trim().split(/ +/g);

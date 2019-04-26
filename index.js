@@ -17,6 +17,7 @@ const dbl = new DBL(apitoken, bot);
 bot.login(bottoken);
 
 eval(fs.readFileSync("./bot.js") + "");
+eval(fs.readFileSync("./config.js") + "");
 eval(fs.readFileSync("./commands/Info/help.js") + "");
 eval(fs.readFileSync("./commands/Info/ping.js") + "");
 eval(fs.readFileSync("./commands/Info/botinfo.js") + "");
@@ -26,11 +27,11 @@ eval(fs.readFileSync("./commands/Moderation/kick.js") + "");
 eval(fs.readFileSync("./commands/Moderation/clear.js") + "");
 eval(fs.readFileSync("./auto/members.js") + "");
 
-const config = require('./config.json');
+const globalconfig = require('./scratch/global.json');
 const packageLock = require('./package-lock.json');
 const package = require('./package.json');
 
-const { prefix } = config;
+const { prefix } = globalconfig;
 const { dependencies, "version": botversion } = package;
 const { "discord.js": libversion, "dblapi.js": apiversion, "node": nodeversion } = dependencies;
 
@@ -38,3 +39,4 @@ const { "discord.js": libversion, "dblapi.js": apiversion, "node": nodeversion }
 bot.on('error', err => {
     console.log(err)
 }) 
+  
