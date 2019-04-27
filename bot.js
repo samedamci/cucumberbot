@@ -18,7 +18,7 @@ bot.on("ready", () => {
     `commands 📓`,
     `${bot.guilds.size} servers 👫`,
     `${prefix}help 🚨`
-  ]
+  ];
   setInterval(function() {
     const rstatus = statuses[Math.floor(Math.random() * statuses.length)];
     bot.user.setActivity(rstatus, {type: "Listening"});

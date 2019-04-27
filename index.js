@@ -38,5 +38,4 @@ const { "discord.js": libversion, "dblapi.js": apiversion, "node": nodeversion }
 // errorlogs
 bot.on('error', err => {
     console.log(err)
-}) 
-  
+});
