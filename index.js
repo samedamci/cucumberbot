@@ -27,7 +27,7 @@ eval(fs.readFileSync("./commands/Moderation/kick.js") + "");
 eval(fs.readFileSync("./commands/Moderation/clear.js") + "");
 eval(fs.readFileSync("./auto/members.js") + "");
 
-const globalconfig = require('./scratch/global.json');
+const globalconfig = require('./global.json');
 const packageLock = require('./package-lock.json');
 const package = require('./package.json');
 
