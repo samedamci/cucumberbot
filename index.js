@@ -22,6 +22,7 @@ eval(fs.readFileSync("./commands/Info/help.js") + "");
 eval(fs.readFileSync("./commands/Info/ping.js") + "");
 eval(fs.readFileSync("./commands/Info/botinfo.js") + "");
 eval(fs.readFileSync("./commands/Info/serverinfo.js") + "");
+eval(fs.readFileSync("./commands/Info/guilds.js") + "");
 eval(fs.readFileSync("./commands/Moderation/ban.js") + "");
 eval(fs.readFileSync("./commands/Moderation/kick.js") + "");
 eval(fs.readFileSync("./commands/Moderation/clear.js") + "");
