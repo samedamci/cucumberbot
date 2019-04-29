@@ -1,13 +1,10 @@
 const LocalStorage = require('node-localstorage').LocalStorage;
-// const mkdir = require('mkdirp'); 
 
 bot.on('message', message => {
 if (message.author.bot) return;
     if (message.content.indexOf(prefix) !== 0) return;
     const { guild } = message;
     ls = new LocalStorage(`./scratch/${guild.id}`);
-    const args = message.content.slice(prefix.length).trim().split(/ +/g);
-    // const command = args.shift().toLowerCase();
     if (message.content === `${prefix}config`) {
         if (fs.existsSync(`./scratch/${guild.id}/language.json`)) {
             const language = require(`./scratch/${guild.id}/language.json`);
@@ -29,19 +26,14 @@ if (message.author.bot) return;
     };
     if (message.content === `${prefix}config-lang PL`) {
         ls.setItem('language.json', '{ "value": "PL" }');
+        let embedPL = new Discord.RichEmbed()
+        .setDescription(`:white_check_mark: Pomyślnie zmieniono język na polski.`)
+        message.channel.send(embedPL);
     };
-});
-
-bot.on("guildCreate", guild => {
-    ls = new LocalStorage(`./scratch/${guild.id}`);
-    // ls.setItem('prefix.json', `{ "value": "!" }`); 
-});
-
-bot.on('message', async message => {
-    if (message.content === `${prefix}guilds`) {
-        const guildArray = bot.guilds.map((guild) => {
-            return `${guild.name} : ${guild.id}`;
-        });
-        message.channel.send(`\`\`\`${guildArray.join("\n")}\`\`\``);
+    if (message.content === `${prefix}config-lang EN`) {
+        let embedEN = new Discord.RichEmbed()
+        .setDescription(`:white_check_mark: You choose English language.`)
+        message.channel.send(embedEN);
+        ls.setItem('language.json', '{ "value": "EN" }');
     };
 });
